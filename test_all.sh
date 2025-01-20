@@ -2,7 +2,7 @@
 norminette ../c05/*/ft*.c
 echo
 
-for i in ex{00..02}
+for i in ex{00..07}
 do
 	echo "$i Compiling..."
 	cc -Wall -Werror -Wextra $i/*.c ../c05/$i/*.c -o compile_$i

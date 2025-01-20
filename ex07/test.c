@@ -5,28 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gostroum <gostroum@student.42tokyo.jp      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/19 23:09:58 by gostroum          #+#    #+#             */
-/*   Updated: 2025/01/20 13:47:29 by gostroum         ###   ########.fr       */
+/*   Created: 2025/01/17 21:12:30 by gostroum          #+#    #+#             */
+/*   Updated: 2025/01/20 16:33:57 by gostroum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 
-int	ft_iterative_power(int nb, int power);
+int	ft_find_next_prime(int nb);
 
-void	test(int nb, int power)
+void	test(int nb)
 {
-	printf("%i to power %i  = %i\n", nb, power, ft_iterative_power(nb, power));
+	printf("%i is next prime after %i\n", ft_find_next_prime(nb), nb);	
 }
 
-int	main(int argc, char **argv)
+int	main(void)
 {
-	if (argc == 3)
-	{
-		test(atoi(argv[1]), atoi(argv[2]));
-	}
-	test(1, 2);
-	test(3, 5);
-	return (1);
+	test(-1);
+	test(0);
+	test(1);
+	test(2);
+	test(3);
+	test(4);
+	test(6);
+	test(19);
+	test(55);
+	test(123838);
+	test(2147483647);
+	test(2147483646);
+	test(2147483645);
+	test(2147483644);
+	test(2147483643);
+	test(2147483642);
+	test(2147483641);
+	test(2147483640);
+	return (0);
 }

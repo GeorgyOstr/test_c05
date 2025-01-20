@@ -5,28 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gostroum <gostroum@student.42tokyo.jp      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/19 23:09:58 by gostroum          #+#    #+#             */
-/*   Updated: 2025/01/20 13:47:29 by gostroum         ###   ########.fr       */
+/*   Created: 2025/01/17 21:12:30 by gostroum          #+#    #+#             */
+/*   Updated: 2025/01/20 15:54:39 by gostroum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 
-int	ft_iterative_power(int nb, int power);
+int	ft_sqrt(int nb);
 
-void	test(int nb, int power)
+void	test(int i)
 {
-	printf("%i to power %i  = %i\n", nb, power, ft_iterative_power(nb, power));
+	printf("Sqrt of %i, is %i\n", i, ft_sqrt(i));	
 }
 
-int	main(int argc, char **argv)
+int	main(void)
 {
-	if (argc == 3)
-	{
-		test(atoi(argv[1]), atoi(argv[2]));
-	}
-	test(1, 2);
-	test(3, 5);
-	return (1);
+	test(4);
+	test(25);
+	test(0);
+	test(1);
+	test(-1);
+	test(15);
+	test(46340*46340);
+	test(2147483647);
+	return (0);
 }
